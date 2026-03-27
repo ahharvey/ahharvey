@@ -41,9 +41,7 @@ Independent consultant specialising in marine biodiversity and fisheries across 
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true" alt="GitHub Streak" />
 </p>
 
-<!-- Top Languages (self-hosted Vercel instance — includes private repos) -->
-<!--
+<!-- Top Languages (generated daily via GitHub Actions — includes private repos) -->
 <p align="center">
-  <img src="https://YOUR-VERCEL-APP.vercel.app/api/top-langs/?username=ahharvey&layout=compact&hide_border=true&langs_count=8" alt="Top Languages" />
+  <img src="./stats/languages.svg" alt="Top Languages" />
 </p>
--->
