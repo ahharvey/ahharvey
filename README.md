@@ -27,6 +27,9 @@ Independent consultant specialising in marine biodiversity and fisheries across 
 ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white)
 ![Typst](https://img.shields.io/badge/Typst-239DAD?style=flat&logo=typst&logoColor=white)
 
+**AI & automation**\
+![Claude Code](https://img.shields.io/badge/Claude_Code-D4A574?style=flat&logo=anthropic&logoColor=white)
+
 **Infrastructure**\
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
