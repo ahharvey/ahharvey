@@ -77,7 +77,8 @@ async function aggregateLanguages(token, repos) {
   return totals;
 }
 
-function buildSVG(languages) {
+function buildSVG(languages, theme = "light") {
+  const isDark = theme === "dark";
   const sorted = Object.entries(languages)
     .sort((a, b) => b[1] - a[1])
     .slice(0, LANGS_TO_SHOW);
@@ -121,19 +122,13 @@ function buildSVG(languages) {
     const lx = col * colWidth;
     const ly = legendY + row * legendRowHeight;
     legend += `  <circle cx="${lx + legendColSize / 2}" cy="${ly + legendColSize / 2}" r="${legendColSize / 2}" fill="${item.colour}" />\n`;
-    legend += `  <text x="${lx + legendColSize + 6}" y="${ly + legendColSize - 1}" font-size="11" class="lang-name">${item.lang} <tspan class="lang-pct">${item.pct}%</tspan></text>\n`;
+    const nameColour = isDark ? "#e6edf3" : "#1f2328";
+    const pctColour = isDark ? "#9198a1" : "#697077";
+    legend += `  <text x="${lx + legendColSize + 6}" y="${ly + legendColSize - 1}" font-size="11" fill="${nameColour}">${item.lang} <tspan fill="${pctColour}">${item.pct}%</tspan></text>\n`;
   });
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${barWidth}" height="${svgHeight}" viewBox="0 0 ${barWidth} ${svgHeight}">
-  <style>
-    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-    .lang-name { fill: #1f2328; }
-    .lang-pct { fill: #697077; }
-    @media (prefers-color-scheme: dark) {
-      .lang-name { fill: #e6edf3; }
-      .lang-pct { fill: #9198a1; }
-    }
-  </style>
+  <style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }</style>
   <defs>${clipPath}</defs>
 ${barGroup}
 ${legend}
@@ -154,12 +149,16 @@ async function main() {
   console.log("Fetching languages...");
   const languages = await aggregateLanguages(token, repos);
 
-  const svg = buildSVG(languages);
   const fs = require("fs");
   const path = require("path");
-  const outPath = path.join(__dirname, "..", "stats", "languages.svg");
-  fs.writeFileSync(outPath, svg);
-  console.log(`Written to ${outPath}`);
+  const statsDir = path.join(__dirname, "..", "stats");
+
+  const lightSvg = buildSVG(languages, "light");
+  const darkSvg = buildSVG(languages, "dark");
+
+  fs.writeFileSync(path.join(statsDir, "languages-light.svg"), lightSvg);
+  fs.writeFileSync(path.join(statsDir, "languages-dark.svg"), darkSvg);
+  console.log("Written light and dark SVGs to stats/");
 }
 
 main().catch((err) => {

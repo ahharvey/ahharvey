@@ -45,7 +45,11 @@ Independent consultant specialising in marine biodiversity and fisheries across 
   </picture>
 </p>
 
-<!-- Top Languages (generated daily via GitHub Actions — includes private repos) -->
+<!-- Top Languages (generated weekly via GitHub Actions — includes private repos) -->
 <p align="center">
-  <img src="./stats/languages.svg" alt="Top Languages" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./stats/languages-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./stats/languages-light.svg" />
+    <img src="./stats/languages-light.svg" alt="Top Languages" />
+  </picture>
 </p>
