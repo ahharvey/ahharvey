@@ -6,21 +6,7 @@ Independent consultant specialising in marine biodiversity and fisheries across 
 
 ---
 
-### Tools & technologies (text)
-
-**Data & analysis** · R · Python · Quarto
-
-**Web & applications** · JavaScript · Ruby · PHP
-
-**Hardware & data capture** · C/C++ · ESP32
-
-**Publishing** · LaTeX · Typst
-
-**Infrastructure** · Docker · Git · Shell
-
----
-
-### Tools & technologies (badges)
+### Tools & technologies
 
 **Data & analysis**\
 ![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
