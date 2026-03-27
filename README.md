@@ -39,9 +39,9 @@ Independent consultant specialising in marine biodiversity and fisheries across 
 <!-- GitHub Streak — uses <picture> to switch theme with GitHub's light/dark mode -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=dark&hide_border=true" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true" />
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true" alt="GitHub Streak" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=dark&hide_border=true&background=00000000" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true&background=00000000" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true&background=00000000" alt="GitHub Streak" />
   </picture>
 </p>
 
