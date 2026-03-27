@@ -36,9 +36,13 @@ Independent consultant specialising in marine biodiversity and fisheries across 
 
 ### GitHub activity
 
-<!-- GitHub Streak -->
+<!-- GitHub Streak — uses <picture> to switch theme with GitHub's light/dark mode -->
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true" alt="GitHub Streak" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=dark&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=ahharvey&theme=default&hide_border=true" alt="GitHub Streak" />
+  </picture>
 </p>
 
 <!-- Top Languages (generated daily via GitHub Actions — includes private repos) -->

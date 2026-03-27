@@ -121,11 +121,19 @@ function buildSVG(languages) {
     const lx = col * colWidth;
     const ly = legendY + row * legendRowHeight;
     legend += `  <circle cx="${lx + legendColSize / 2}" cy="${ly + legendColSize / 2}" r="${legendColSize / 2}" fill="${item.colour}" />\n`;
-    legend += `  <text x="${lx + legendColSize + 6}" y="${ly + legendColSize - 1}" font-size="11" fill="#333">${item.lang} <tspan fill="#888">${item.pct}%</tspan></text>\n`;
+    legend += `  <text x="${lx + legendColSize + 6}" y="${ly + legendColSize - 1}" font-size="11" class="lang-name">${item.lang} <tspan class="lang-pct">${item.pct}%</tspan></text>\n`;
   });
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${barWidth}" height="${svgHeight}" viewBox="0 0 ${barWidth} ${svgHeight}">
-  <style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }</style>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .lang-name { fill: #1f2328; }
+    .lang-pct { fill: #697077; }
+    @media (prefers-color-scheme: dark) {
+      .lang-name { fill: #e6edf3; }
+      .lang-pct { fill: #9198a1; }
+    }
+  </style>
   <defs>${clipPath}</defs>
 ${barGroup}
 ${legend}
