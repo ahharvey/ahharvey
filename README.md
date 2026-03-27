@@ -30,6 +30,7 @@ Independent consultant specialising in marine biodiversity and fisheries across 
 
 ### Tools & technologies
 
+<div align="center">
 <table>
 <tr>
 <td><strong>Data & analysis</strong></td>
@@ -77,3 +78,4 @@ Independent consultant specialising in marine biodiversity and fisheries across 
 </td>
 </tr>
 </table>
+</div>
