@@ -2,30 +2,30 @@
   <style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }</style>
   <defs><clipPath id="bar-clip"><rect x="0" y="0" width="400" height="8" rx="4" /></clipPath></defs>
 <g clip-path="url(#bar-clip)">
-  <rect x="0" y="0" width="182.4" height="8" fill="#276DC3" rx="0" />
-  <rect x="182.4" y="0" width="70.8" height="8" fill="#F7DF1E" rx="0" />
-  <rect x="253.2" y="0" width="38.8" height="8" fill="#CC342D" rx="0" />
-  <rect x="292" y="0" width="30" height="8" fill="#777BB4" rx="0" />
-  <rect x="322" y="0" width="22.8" height="8" fill="#3776AB" rx="0" />
-  <rect x="344.8" y="0" width="22.4" height="8" fill="#00599C" rx="0" />
-  <rect x="367.2" y="0" width="17.6" height="8" fill="#4EAA25" rx="0" />
-  <rect x="384.8" y="0" width="14.800000000000002" height="8" fill="#384d54" rx="0" />
+  <rect x="0" y="0" width="172.4" height="8" fill="#276DC3" rx="0" />
+  <rect x="172.4" y="0" width="68" height="8" fill="#F7DF1E" rx="0" />
+  <rect x="240.4" y="0" width="37.2" height="8" fill="#CC342D" rx="0" />
+  <rect x="277.6" y="0" width="31.6" height="8" fill="#4EAA25" rx="0" />
+  <rect x="309.20000000000005" y="0" width="28.800000000000004" height="8" fill="#777BB4" rx="0" />
+  <rect x="338.00000000000006" y="0" width="25.6" height="8" fill="#3776AB" rx="0" />
+  <rect x="363.6000000000001" y="0" width="21.6" height="8" fill="#00599C" rx="0" />
+  <rect x="385.2000000000001" y="0" width="14.400000000000002" height="8" fill="#384d54" rx="0" />
 </g>
   <circle cx="4" cy="32" r="4" fill="#276DC3" />
-  <text x="14" y="35" font-size="11" fill="#1f2328">R <tspan fill="#697077">45.6%</tspan></text>
+  <text x="14" y="35" font-size="11" fill="#1f2328">R <tspan fill="#697077">43.1%</tspan></text>
   <circle cx="204" cy="32" r="4" fill="#F7DF1E" />
-  <text x="214" y="35" font-size="11" fill="#1f2328">JavaScript <tspan fill="#697077">17.7%</tspan></text>
+  <text x="214" y="35" font-size="11" fill="#1f2328">JavaScript <tspan fill="#697077">17.0%</tspan></text>
   <circle cx="4" cy="52" r="4" fill="#CC342D" />
-  <text x="14" y="55" font-size="11" fill="#1f2328">Ruby <tspan fill="#697077">9.7%</tspan></text>
-  <circle cx="204" cy="52" r="4" fill="#777BB4" />
-  <text x="214" y="55" font-size="11" fill="#1f2328">PHP <tspan fill="#697077">7.5%</tspan></text>
-  <circle cx="4" cy="72" r="4" fill="#3776AB" />
-  <text x="14" y="75" font-size="11" fill="#1f2328">Python <tspan fill="#697077">5.7%</tspan></text>
-  <circle cx="204" cy="72" r="4" fill="#00599C" />
-  <text x="214" y="75" font-size="11" fill="#1f2328">C++ <tspan fill="#697077">5.6%</tspan></text>
-  <circle cx="4" cy="92" r="4" fill="#4EAA25" />
-  <text x="14" y="95" font-size="11" fill="#1f2328">Shell <tspan fill="#697077">4.4%</tspan></text>
+  <text x="14" y="55" font-size="11" fill="#1f2328">Ruby <tspan fill="#697077">9.3%</tspan></text>
+  <circle cx="204" cy="52" r="4" fill="#4EAA25" />
+  <text x="214" y="55" font-size="11" fill="#1f2328">Shell <tspan fill="#697077">7.9%</tspan></text>
+  <circle cx="4" cy="72" r="4" fill="#777BB4" />
+  <text x="14" y="75" font-size="11" fill="#1f2328">PHP <tspan fill="#697077">7.2%</tspan></text>
+  <circle cx="204" cy="72" r="4" fill="#3776AB" />
+  <text x="214" y="75" font-size="11" fill="#1f2328">Python <tspan fill="#697077">6.4%</tspan></text>
+  <circle cx="4" cy="92" r="4" fill="#00599C" />
+  <text x="14" y="95" font-size="11" fill="#1f2328">C++ <tspan fill="#697077">5.4%</tspan></text>
   <circle cx="204" cy="92" r="4" fill="#384d54" />
-  <text x="214" y="95" font-size="11" fill="#1f2328">Dockerfile <tspan fill="#697077">3.7%</tspan></text>
+  <text x="214" y="95" font-size="11" fill="#1f2328">Dockerfile <tspan fill="#697077">3.6%</tspan></text>
 
 </svg>
