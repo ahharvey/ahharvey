@@ -4,8 +4,8 @@
 <g clip-path="url(#bar-clip)">
   <rect x="0" y="0" width="163.2" height="8" fill="#276DC3" rx="0" />
   <rect x="163.2" y="0" width="64.8" height="8" fill="#F7DF1E" rx="0" />
-  <rect x="228" y="0" width="39.6" height="8" fill="#3776AB" rx="0" />
-  <rect x="267.6" y="0" width="36" height="8" fill="#4EAA25" rx="0" />
+  <rect x="228" y="0" width="38.8" height="8" fill="#3776AB" rx="0" />
+  <rect x="266.8" y="0" width="36.8" height="8" fill="#4EAA25" rx="0" />
   <rect x="303.6" y="0" width="35.2" height="8" fill="#CC342D" rx="0" />
   <rect x="338.8" y="0" width="27.200000000000003" height="8" fill="#777BB4" rx="0" />
   <rect x="366" y="0" width="20.4" height="8" fill="#00599C" rx="0" />
@@ -16,9 +16,9 @@
   <circle cx="204" cy="32" r="4" fill="#F7DF1E" />
   <text x="214" y="35" font-size="11" fill="#e6edf3">JavaScript <tspan fill="#9198a1">16.2%</tspan></text>
   <circle cx="4" cy="52" r="4" fill="#3776AB" />
-  <text x="14" y="55" font-size="11" fill="#e6edf3">Python <tspan fill="#9198a1">9.9%</tspan></text>
+  <text x="14" y="55" font-size="11" fill="#e6edf3">Python <tspan fill="#9198a1">9.7%</tspan></text>
   <circle cx="204" cy="52" r="4" fill="#4EAA25" />
-  <text x="214" y="55" font-size="11" fill="#e6edf3">Shell <tspan fill="#9198a1">9.0%</tspan></text>
+  <text x="214" y="55" font-size="11" fill="#e6edf3">Shell <tspan fill="#9198a1">9.2%</tspan></text>
   <circle cx="4" cy="72" r="4" fill="#CC342D" />
   <text x="14" y="75" font-size="11" fill="#e6edf3">Ruby <tspan fill="#9198a1">8.8%</tspan></text>
   <circle cx="204" cy="72" r="4" fill="#777BB4" />
