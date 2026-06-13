@@ -1,0 +1,65 @@
+# Canonical workflow: when the repo owner comments on an issue labelled
+# `needs-decision`, remove both the label AND the owner-as-assignee marker.
+# Propagated to ahharvey/* repos via scripts/apply-workflows.sh.
+#
+# Acts on issue comments only (PR comments are excluded). The "comment author
+# is repo owner" check is the answer signal — misfires are recoverable by
+# re-adding the label + assignee manually.
+#
+# Why both label and assignee: the label is the canonical signal (used by
+# `gh search --label needs-decision` on web); the assignee is the iOS mobile-
+# affordance mirror (renders the issue in the GitHub iOS app's "Assigned to me"
+# cross-repo view). Both move together to avoid drift.
+#
+# Known misfire: if the owner posts a clarifying comment before deciding (e.g.
+# "what do you mean by option (a)?"), label + assignee drop on that comment.
+# Re-add both if you intend to come back and decide later.
+
+name: Auto-remove needs-decision on owner reply
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+
+jobs:
+  remove-marker:
+    if: ${{ !github.event.issue.pull_request && github.event.comment.user.login == github.event.repository.owner.login && contains(github.event.issue.labels.*.name, 'needs-decision') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove needs-decision label and owner assignee
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issue_number = context.issue.number;
+            const ownerLogin = owner;
+
+            // Drop the label
+            try {
+              await github.rest.issues.removeLabel({
+                owner, repo, issue_number, name: 'needs-decision',
+              });
+              core.info('Removed needs-decision label.');
+            } catch (e) {
+              if (e.status === 404) {
+                core.info('Label already absent (race with manual removal); nothing to do.');
+              } else {
+                throw e;
+              }
+            }
+
+            // Drop the assignee mirror. removeAssignees is idempotent — assignees
+            // not currently on the issue are silently ignored, so we don't need
+            // to pre-check membership.
+            try {
+              await github.rest.issues.removeAssignees({
+                owner, repo, issue_number, assignees: [ownerLogin],
+              });
+              core.info(`Removed ${ownerLogin} from assignees.`);
+            } catch (e) {
+              core.warning(`Failed to remove assignee ${ownerLogin}: ${e.message}`);
+            }
